@@ -1,0 +1,20 @@
+{
+  "name": "realTimeStats",
+  "version": "0.0.0a",
+  "description": "Realtime Stats",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "realtime",
+    "stats"
+  ],
+  "author": "Emiliano Eloi Silva Barbosa",
+  "license": "BSD",
+  "dependencies": {
+    "socket.io": "~1.0.6",
+    "express": "^4.8.5"
+  }
+}
