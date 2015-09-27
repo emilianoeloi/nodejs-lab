@@ -1537,6 +1537,17 @@ app.get('/instagram/lastPost', function (req, res) {
 
 });
 
+app.get('/instagram/lastOneImageUrl', function (req, res) {
+
+    instagram.user_media_recent(keys.instagram.userId, function(err, result, remaining, limit) {
+        if (err) {
+            res.json(500);
+        };
+        res.json(result.images.standard_resolution);
+    });
+
+});
+
 app.listen(3000, function(){
     console.log('listen');
 })
