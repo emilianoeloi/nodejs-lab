@@ -9,6 +9,7 @@ var $ = require('cheerio');
 var dir = require('node-dir');
 var db = monk('localhost:27017/firefoxos');
 var app = new express();
+var instagram = require('instagram-node').instagram();
 
 app.enable('trust proxy');
 
@@ -1518,6 +1519,8 @@ app.get('/echonest/songs/:artistId', function (req, res) {
         res.json(500, err);
     }
 })
+
+/// Instagram
 
 app.listen(3000, function(){
     console.log('listen');

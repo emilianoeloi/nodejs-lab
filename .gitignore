@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 *.mp3
-=======
 # Logs
 logs
 *.log
@@ -28,4 +26,5 @@ build/Release
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
->>>>>>> be634369c6fd230ed404c3669286146caee42705
+
+keys
