@@ -1537,7 +1537,7 @@ app.get('/instagram/lastPost', function (req, res) {
 
 });
 
-app.get('/instagram/lastOneImageUrl', function (req, res) {
+app.get('/instagram/lastOneImage', function (req, res) {
 
     instagram.user_media_recent(keys.instagram.userId, function(err, result, remaining, limit) {
         if (err) {
