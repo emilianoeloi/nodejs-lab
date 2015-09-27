@@ -1526,7 +1526,7 @@ instagram.use({ client_id: keys.instagram.clientId,
          client_secret: keys.instagram.clientSecret });
 app.get('/instagram/lastPost', function (req, res) {
 
-    instagram.user(keys.instagram.userId, function(err, result, remaining, limit) {
+    instagram.user_media_recent(keys.instagram.userId, function(err, result, remaining, limit) {
         var json = {};
         json.err = err;
         json.result = result;
