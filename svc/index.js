@@ -1,3 +1,4 @@
+var keys = require("../keys/keys");
 var OAuth = require('oauth');
 var MD5 = require('MD5');
 var mongo = require('mongodb');
@@ -1521,6 +1522,20 @@ app.get('/echonest/songs/:artistId', function (req, res) {
 })
 
 /// Instagram
+instagram.use({ client_id: keys.instagram.clientId,
+         client_secret: keys.instagram.clientSecret });
+app.get('/instagram/lastPost', function (req, res) {
+
+    instagram.user(keys.instagram.userId, function(err, result, remaining, limit) {
+        var json = {};
+        json.err = err;
+        json.result = result;
+        json.remaining = remaining;
+        json.limit = limit;
+        res.json(json);
+    });
+
+});
 
 app.listen(3000, function(){
     console.log('listen');
