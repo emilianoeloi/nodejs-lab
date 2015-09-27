@@ -1543,7 +1543,9 @@ app.get('/instagram/lastOneImage', function (req, res) {
         if (err) {
             res.json(500);
         };
-        res.json(result[0].images.standard_resolution);
+        var image = result[0].images.standard_resolution;
+        image.captionText = result[0].caption.text; 
+        res.json(image);
     });
 
 });
